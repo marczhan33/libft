@@ -62,7 +62,7 @@ static	int		ft_wordlength(char const *s, char c)
 	return (len);
 }
 
-void	*ft_free_split(void **str,int columns) 
+static	void		*ft_free_split(char **t,int columns) 
 {
 	int i;
 
