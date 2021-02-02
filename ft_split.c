@@ -6,7 +6,7 @@
 /*   By: mzhan <marczhan33@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/17 16:23:01 by mzhan             #+#    #+#             */
-/*   Updated: 2021/02/01 16:13:53 by mzhan            ###   ########.fr       */
+/*   Updated: 2021/02/02 19:31:03 by mzhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static	int		ft_wordlength(char const *s, char c)
 	return (len);
 }
 
-static	void		*ft_free_split(char **t,int columns) 
+static	void	*ft_free_split(char **t, int columns)
 {
 	int i;
 
@@ -71,7 +71,7 @@ static	void		*ft_free_split(char **t,int columns)
 	{
 		free(t[i++]);
 	}
-	free(t);			
+	free(t);
 	return (NULL);
 }
 
