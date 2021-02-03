@@ -6,25 +6,30 @@
 /*   By: mzhan <marczhan33@gmail.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/31 15:37:43 by mzhan             #+#    #+#             */
-/*   Updated: 2021/02/01 16:36:32 by mzhan            ###   ########.fr       */
+/*   Updated: 2021/02/03 21:38:12 by mzhan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	char	tmp_c;
+	char	*tmp_s;
+	int		i;
+	char	*p;
 
+	tmp_c = (char)c;
+	tmp_s = (char *)s;
 	i = 0;
-	while (s[i])
-		i++;
-	while (i >= 0)
+	p = 0;
+	while (tmp_s[i] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		if (tmp_s[i] == tmp_c)
+			p = &tmp_s[i];
+		i++;
 	}
-	return (NULL);
+	if (tmp_s[i] == tmp_c)
+		p = &tmp_s[i];
+	return (p);
 }
